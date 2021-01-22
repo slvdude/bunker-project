@@ -55,5 +55,47 @@ class Application {
 	public function getId(){
 		return $this->user->getId();
 	}
+
+	public function average() {
+		return $this->user->average();
+	}
     
+    public function order() {
+    	return $this->user->order();
+    }
+
+    public function oddeven() {
+    	return $this->user->oddeven();
+    }
+
+    public function messageLength() {
+    	return $this->user->messageLength();
+    }
+
+    public function citizens() {
+    	return $this->user->citizens();
+    }
+
+    public function passport($params) {
+    	if($params['id']){
+    		return $this->user->passport($params['id']);
+    	}
+    }
+
+    public function inactiveUsers() {
+    return $this->user->inactiveUsers();
+   }
+
+   public function getAlldata($params) {
+   	if($params['table']){
+   		return $this->user->getAlldata($params['table']);
+   	}   
+   	return false;	
+   }
+
+   public function getNameByLetter($params) {
+   	if($params['letter']){
+   		return $this->user->getNameByLetter($params['letter']);
+   	}
+   }
 }

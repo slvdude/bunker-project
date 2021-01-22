@@ -42,4 +42,40 @@ class User {
     public function getId(){
 		return $this->db->getId();
 	}
+
+    public function average() {
+        return $this->db->average();
+    }
+
+    public function order() {
+        return $this->db->order();
+    }
+
+   public function oddeven() {
+        return $this->db->oddeven();
+    } 
+
+   public function messageLength() {
+    return $this->db->messageLength();
+   }
+
+   public function citizens() {
+        return $this->db->citizens();
+   }
+
+   public function passport($id) {
+    return $this->db->passport($id);
+   }
+
+   public function inactiveUsers() {
+    return $this->db->inactiveUsers();
+   }
+
+   public function getAlldata($table) {
+    return $this->db->getAlldata($table);
+   }
+
+   public function getNameByLetter($letter) {
+    return $this->db->getNameByLetter($letter);
+   }
 }

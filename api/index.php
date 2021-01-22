@@ -10,6 +10,15 @@ function router($params) {
         $app = new Application();
         switch ($method) {
             // user
+            case 'getNameByLetter' : return $app->getNameByLetter($params);
+            case 'getAlldata' : return $app->getAlldata($params);
+            case 'inactiveUsers' :return $app->inactiveUsers();
+            case 'passport' : return $app->passport($params);
+            case 'citizens' : return $app->citizens();
+            case 'messageLength' : return $app->messageLength();
+            case 'oddeven': return $app->oddeven();
+            case 'order' : return $app->order();
+            case 'average' : return $app->average();
             case 'getId' : return $app->getId();
             case 'login' : return $app->login($params);
             case 'logout' : return $app->logout($params);
